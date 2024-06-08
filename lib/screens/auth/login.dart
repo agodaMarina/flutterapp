@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:projetflutter/screens/auth/signin.dart';
 import 'package:projetflutter/theme.dart';
 
 import '../../widgets/loginform.dart';
@@ -38,7 +39,7 @@ class LoginScreen extends StatelessWidget{
                 width: 5,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () { SignUpScreen(); },
                 child: Text(
                   'Inscrivez-vous',
                   style: textButton.copyWith(
@@ -75,7 +76,7 @@ class LoginScreen extends StatelessWidget{
             height: 20,
           ),
           Text(
-            'Ou connectez-vous avec:',
+            'Ou Connectez-vous avec:',
 
           ),
           SizedBox(

@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../theme.dart';
+
 class BottomAppBar extends StatefulWidget {
   const BottomAppBar({super.key});
   @override
@@ -59,7 +61,7 @@ var currentIndex=0;
                     width: index == currentIndex ? displayWidth * .32 : 0,
                     decoration: BoxDecoration(
                       color: index == currentIndex
-                          ? Colors.blueAccent.withOpacity(.2)
+                          ? kPrimaryColor.withOpacity(.2)
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(50),
                     ),
@@ -91,7 +93,7 @@ var currentIndex=0;
                                   ? '${listOfStrings[index]}'
                                   : '',
                               style: TextStyle(
-                                color: Colors.blueAccent,
+                                color: kPrimaryColor,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 15,
                               ),
@@ -111,7 +113,7 @@ var currentIndex=0;
                             listOfIcons[index],
                             size: displayWidth * .076,
                             color: index == currentIndex
-                                ? Colors.blueAccent
+                                ? kPrimaryColor
                                 : Colors.black26,
                           ),
                         ],
