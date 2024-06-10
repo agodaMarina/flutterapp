@@ -38,16 +38,21 @@ class LoginScreen extends StatelessWidget{
               const SizedBox(
                 width: 5,
               ),
-              TextButton(
-                onPressed: () { SignUpScreen(); },
-                child: Text(
-                  'Inscrivez-vous',
-                  style: textButton.copyWith(
-                    decoration: TextDecoration.underline,
-                    decorationThickness: 1,
-                  ),
-                ),
-              ),
+              GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignUpScreen()));
+                    },
+                    child: Text(
+                      'Inscrivez-Vous',
+                      style: textButton.copyWith(
+                        decoration: TextDecoration.underline,
+                        decorationThickness: 1,
+                      ),
+                    ),
+                  )
             ],
           ),
           const SizedBox(

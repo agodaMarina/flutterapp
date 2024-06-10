@@ -1,17 +1,16 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../theme.dart';
 
-class BottomAppBar extends StatefulWidget {
-  const BottomAppBar({super.key});
+class NavBarCustom extends StatefulWidget {
+  const NavBarCustom({super.key});
   @override
-  State<BottomAppBar> createState() => _BottomAppBarState();
+  State<NavBarCustom> createState() => _NavBarCustomState();
 }
 
-class _BottomAppBarState extends State<BottomAppBar> {
+class _NavBarCustomState extends State<NavBarCustom> {
 
 var currentIndex=0;
   @override
@@ -27,7 +26,7 @@ var currentIndex=0;
             BoxShadow(
               color: Colors.black.withOpacity(.1),
               blurRadius: 30,
-              offset: Offset(0, 10),
+              offset: const Offset(0, 10),
             ),
           ],
           borderRadius: BorderRadius.circular(50),
@@ -48,14 +47,14 @@ var currentIndex=0;
             child: Stack(
               children: [
                 AnimatedContainer(
-                  duration: Duration(seconds: 1),
+                  duration: const Duration(seconds: 1),
                   curve: Curves.fastLinearToSlowEaseIn,
                   width: index == currentIndex
                       ? displayWidth * .32
                       : displayWidth * .18,
                   alignment: Alignment.center,
                   child: AnimatedContainer(
-                    duration: Duration(seconds: 1),
+                    duration: const Duration(seconds: 1),
                     curve: Curves.fastLinearToSlowEaseIn,
                     height: index == currentIndex ? displayWidth * .12 : 0,
                     width: index == currentIndex ? displayWidth * .32 : 0,
@@ -68,7 +67,7 @@ var currentIndex=0;
                   ),
                 ),
                 AnimatedContainer(
-                  duration: Duration(seconds: 1),
+                  duration: const Duration(seconds: 1),
                   curve: Curves.fastLinearToSlowEaseIn,
                   width: index == currentIndex
                       ? displayWidth * .31
@@ -79,20 +78,20 @@ var currentIndex=0;
                       Row(
                         children: [
                           AnimatedContainer(
-                            duration: Duration(seconds: 1),
+                            duration: const Duration(seconds: 1),
                             curve: Curves.fastLinearToSlowEaseIn,
                             width:
                                 index == currentIndex ? displayWidth * .13 : 0,
                           ),
                           AnimatedOpacity(
                             opacity: index == currentIndex ? 1 : 0,
-                            duration: Duration(seconds: 1),
+                            duration: const Duration(seconds: 1),
                             curve: Curves.fastLinearToSlowEaseIn,
                             child: Text(
                               index == currentIndex
-                                  ? '${listOfStrings[index]}'
+                                  ? listOfStrings[index]
                                   : '',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: kPrimaryColor,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 15,
@@ -104,7 +103,7 @@ var currentIndex=0;
                       Row(
                         children: [
                           AnimatedContainer(
-                            duration: Duration(seconds: 1),
+                            duration: const Duration(seconds: 1),
                             curve: Curves.fastLinearToSlowEaseIn,
                             width:
                                 index == currentIndex ? displayWidth * .03 : 20,
