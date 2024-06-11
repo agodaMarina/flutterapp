@@ -11,21 +11,31 @@ class ProfilScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return   Scaffold(
       appBar: AppBar(
-        elevation: 0,
+        
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        foregroundColor: kPrimaryColor,
-        title: const Text(""),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.settings_rounded,
-              color: kPrimaryColor,),
-          )
-        ],
+        elevation: 0,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+           const Text(
+              'Profil',
+              style: TextStyle(
+                color: kPrimaryColor,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.notifications_active_outlined,
+                color: kPrimaryColor,
+              ),
+            ),
+          ],
+        ),
       ),
-      
       body: ListView(
         padding: const EdgeInsets.all(10),
         children:  [
@@ -55,7 +65,7 @@ class ProfilScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(right: 5),
                 child:Text(
-                  "completez votre profile",
+                  "completez votre profil",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),

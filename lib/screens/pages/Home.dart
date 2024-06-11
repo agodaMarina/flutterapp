@@ -4,6 +4,7 @@ import 'package:projetflutter/screens/pages/acceuil.dart';
 import 'package:projetflutter/screens/pages/factures/facture.dart';
 
 import 'package:projetflutter/screens/pages/profile/profile.dart';
+import 'package:projetflutter/screens/pages/rapports/rapport.dart';
 
 import '../../theme.dart';
 
@@ -20,13 +21,15 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     double displayWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      body: PageView(
+    return  Scaffold(
+      body: Center(
+        child: 
+      PageView(
         controller: _pageController,
         children: const [
           Acceuil(),
           FactureScreen(),
-          FactureScreen(),
+          RapprtScreen(),
           ProfilScreen(),
         ],
         onPageChanged: (index) {
@@ -35,7 +38,7 @@ class _HomeState extends State<Home> {
           });
         },
       ),
-      
+      ),
       bottomNavigationBar: Container(
         margin: EdgeInsets.all(displayWidth * .05),
         height: displayWidth * .155,
