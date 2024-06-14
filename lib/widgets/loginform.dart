@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart%20';
 
+import '../screens/pages/home.dart';
 import '../theme.dart';
 
 class LoginForm extends StatefulWidget {
@@ -18,6 +19,18 @@ class _LoginFormState extends State<LoginForm> {
       children: [
         buildInputForm('Email',false),
         buildInputForm('Mot de passe',true),
+        const SizedBox(height: 30),
+        ElevatedButton(
+            onPressed:() {
+               Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Home()));
+            },
+            child:  Text('Se Connecter',
+            style: textButton.copyWith(color: kWhiteColor)),
+            
+          ),
       ],
     );
   }

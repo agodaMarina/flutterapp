@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:projetflutter/screens/auth/signin.dart';
 import 'package:projetflutter/theme.dart';
@@ -16,7 +14,7 @@ class LoginScreen extends StatelessWidget{
   Widget build (BuildContext context){
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -33,7 +31,7 @@ class LoginScreen extends StatelessWidget{
           Row(
             children: [
               Text(
-                'Vous êtes nouveau?',
+                'Vous êtes nouveau ?',
                 style: subTitle,
               ),
               const SizedBox(
@@ -64,7 +62,7 @@ class LoginScreen extends StatelessWidget{
             height: 20,
           ),
           const Text(
-            'Mot de passe oublié?',
+            'Mot de passe oublié ?',
             style: TextStyle(
               color: kZambeziColor,
               fontSize: 14,
@@ -72,23 +70,22 @@ class LoginScreen extends StatelessWidget{
               decorationThickness: 1,
             )
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          PrimaryButton(
-            buttonText: 'Connexion',
-          ),
-          SizedBox(
+          // const PrimaryButton(
+          //   buttonText: 'Connexion',
+          // ),
+          const SizedBox(
             height: 20,
           ),
-          Text(
+          const Text(
             'Ou Connectez-vous avec:',
-
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          LoginOption(),
+          const LoginOption(),
         ],),
       )
     );

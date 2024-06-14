@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../theme.dart';
@@ -32,6 +31,7 @@ class _CheckBoxState extends State<CheckBox> {
                     borderRadius: BorderRadius.circular(4),
                     border: Border.all(color: kDarkGreyColor)),
                 child: _isSelected
+                    // ignore: dead_code
                     ? const Icon(
                         Icons.check,
                         size: 17,

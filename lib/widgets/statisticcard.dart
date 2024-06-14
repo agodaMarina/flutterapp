@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:projetflutter/theme.dart';
 
 
-import '../themeColors.dart';
 import '../themestyles.dart';
 
 class CreditCard extends StatefulWidget {

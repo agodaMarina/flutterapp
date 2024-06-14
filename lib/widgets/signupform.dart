@@ -1,7 +1,8 @@
-
 import 'package:flutter/material.dart';
+import 'package:projetflutter/screens/pages/home.dart';
 
 import '../theme.dart';
+
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -12,16 +13,32 @@ class SignUpForm extends StatefulWidget {
 
 class _SignUpFormState extends State<SignUpForm> {
   bool _isObscure=true;
+  
+  
+ 
+
   @override
   Widget build(BuildContext context) {
     return Column(
+     
       children: [
         buildInputForm('Prénom', false),
         buildInputForm('Nom', false),
         buildInputForm('Email', false),
-        buildInputForm('Phone', false),
-        buildInputForm('Password', true),
-        buildInputForm('Confirm Password', true),
+        buildInputForm('Mot de passe', true),
+        buildInputForm('téléphone', false),
+        buildInputForm('rôle', false),
+        const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed:() {
+               Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Home()));
+            },
+            child:Text('S\'inscrire',
+            style: textButton.copyWith(color: kWhiteColor)),
+          ),
       ],
     );
   }
@@ -30,6 +47,7 @@ class _SignUpFormState extends State<SignUpForm> {
     return Padding(
         padding: const EdgeInsets.symmetric(vertical: 5),
         child: TextFormField(
+          
           obscureText: pass ? _isObscure : false,
           decoration: InputDecoration(
             hintText: hint,
@@ -54,6 +72,13 @@ class _SignUpFormState extends State<SignUpForm> {
                           ))
                 : null,
           ),
-        ));
+          validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Veuillez entrer votre $hint';
+          }
+          return null;
+        },
+        )        
+        );
   }
 }

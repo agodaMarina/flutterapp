@@ -1,12 +1,9 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:projetflutter/screens/auth/login.dart';
 
 import '../../theme.dart';
 
 import '../../widgets/loginoption.dart';
-import '../../widgets/primarybutton.dart';
 import '../../widgets/signupform.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -80,13 +77,13 @@ class SignUpScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const Padding(
-              padding: kDefaultPadding,
-              child: PrimaryButton(
-              buttonText: 'S\'inscrire'),
+            // const Padding(
+            //   padding: kDefaultPadding,
+            //   child: PrimaryButton(
+            //   buttonText: 'S\'inscrire'),
             
 
-            ),
+            // ),
             const SizedBox(
               height: 20,
             ),

@@ -11,9 +11,12 @@ dependencies:
   flutter:
     sdk: flutter
     
+  fluttertoast: ^8.2.6
+  # http: ^1.2.1
   http: ^1.2.1
   image_picker: ^1.1.2
   page_transition: ^2.1.0
+  shared_preferences: ^2.2.3
 
 dev_dependencies:
   flutter_test:

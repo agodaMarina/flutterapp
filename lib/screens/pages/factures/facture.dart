@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../theme.dart';
 
@@ -60,7 +61,7 @@ class FactureScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Add your onPressed logic here
+          _pickImage();
         },
         backgroundColor: kPrimaryColor,
         shape: ShapeBorder.lerp(
@@ -75,4 +76,11 @@ class FactureScreen extends StatelessWidget {
       )
     );
   }
+
+  Future _pickImage() async {
+    final returnedImage = await ImagePicker().pickImage(source: ImageSource.camera);
+    if (returnedImage == null)return; 
+}
+
+
 }
